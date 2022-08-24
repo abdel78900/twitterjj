@@ -155,18 +155,7 @@ const Post = ({ id, post, postPage }) => {
           </div>
 
           {session.user.uid === post?.id ? "" : ""}
-          {/* <div
-              className="flex items-center space-x-1 group"
-              onClick={(e) => {
-                e.stopPropagation();
-                deleteDoc(doc(db, "posts", id));
-                router.push("/");
-              }}
-            >
-              <div className="icon group-hover:bg-red-600/10">
-                <TrashIcon className="h-5 group-hover:text-red-600" />
-              </div>
-            </div> */}
+          
           <div className="flex items-center space-x-1 group translate-x-4">
             <div className="icon group-hover:bg-green-500/10">
               <div className="flex translate-x-1 group-hover:text-green-500">

@@ -1,6 +1,5 @@
-import { Dialog, Menu, Transition } from "@headlessui/react";
-import { Fragment, useEffect, useRef, useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/solid'
+import {  Menu, Transition } from "@headlessui/react";
+import { Fragment } from 'react'
 import { BsThreeDots } from 'react-icons/bs'
 import { FiUserPlus } from 'react-icons/fi'
 import { TbPlaylistAdd } from 'react-icons/tb'
@@ -10,18 +9,7 @@ import { BsCodeSlash } from 'react-icons/bs'
 import { FiFlag } from 'react-icons/fi'
 import { useSession } from 'next-auth/react'
 import { TrashIcon } from '@heroicons/react/outline'
-import { db } from "../firebase";
-import {
-  collection,
-  deleteDoc,
-  doc,
-  onSnapshot,
-  orderBy,
-  query,
-  setDoc,
-} from "@firebase/firestore";
 import { useRouter } from 'next/router'
-import ModalDelete from './ModalDelete'
 import { useRecoilState } from 'recoil'
 import { modalDeleteState, postIdState } from '../atoms/modalAtom'
 
@@ -34,11 +22,6 @@ const Popup = ({post, id}) =>  {
   const [isOpen, setIsOpen] = useRecoilState(modalDeleteState);
   const [postId, setPostId] = useRecoilState(postIdState);
   
-  // console.log('mds:', isOpen);
-  // useEffect(() => {
-  //   setPostId(postId1)
-  // }, [postId1])
-
   return (
     <div 
     onClick={(e) => {

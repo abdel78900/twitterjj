@@ -1,19 +1,14 @@
 import React from 'react'
-import { Fragment, useEffect, useRef, useState } from "react";
+import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { modalDeleteState, postIdState } from "../atoms/modalAtom";
 import { useRecoilState } from 'recoil';
 import {
-    collection,
     deleteDoc,
     doc,
-    onSnapshot,
-    orderBy,
-    query,
-    setDoc,
   } from "@firebase/firestore";
 
-  import { db, storage } from "../firebase";
+  import { db } from "../firebase";
 import { useRouter } from 'next/router';
 
 const ModalDelete = ({id}) => {

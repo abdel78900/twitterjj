@@ -15,8 +15,6 @@ import {
 import { db, storage } from "../firebase";
 import { useSession } from "next-auth/react";
 import {
-  CalendarIcon,
-  ChartBarIcon,
   EmojiHappyIcon,
   PhotographIcon,
   XIcon,
@@ -267,24 +265,6 @@ const Modal =() => {
                         </button>
       </div>
         )}
-                        {/* <div className="flex items-center">
-                          <div className="icon">
-                            <PhotographIcon className="text-[#1d9bf0] h-[22px]" />
-                          </div>
-
-                          <div className="icon rotate-90">
-                            <ChartBarIcon className="text-[#1d9bf0] h-[22px]" />
-                          </div>
-
-                          <div className="icon">
-                            <EmojiHappyIcon className="text-[#1d9bf0] h-[22px]" />
-                          </div>
-
-                          <div className="icon">
-                            <CalendarIcon className="text-[#1d9bf0] h-[22px]" />
-                          </div>
-                        </div> */}
-                        
                       </div>
                     </div>
                   </div>

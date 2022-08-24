@@ -4,23 +4,17 @@ import SidebarLink from './SidebarLink'
 import { HomeIcon } from "@heroicons/react/solid";
 import { getProviders, getSession, signOut, useSession } from "next-auth/react";
 import {
-    HashtagIcon,
-    BellIcon,
-    InboxIcon,
     BookmarkIcon,
     UsersIcon,
     UserIcon,
     DotsCircleHorizontalIcon,
-    DotsHorizontalIcon,
   } from "@heroicons/react/outline";
   import { BsThreeDots } from 'react-icons/bs';
   import { BiHomeCircle } from 'react-icons/bi';
   import { RiHashtag } from 'react-icons/ri';
   import { VscBell } from 'react-icons/vsc';
-  import { HiOutlineMail } from 'react-icons/hi';
-  
-  
-import { useRouter } from 'next/router';
+  import { HiOutlineMail } from 'react-icons/hi'; 
+  import { useRouter } from 'next/router';
 
 
 

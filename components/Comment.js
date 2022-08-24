@@ -1,9 +1,5 @@
 import {
-    ChartBarIcon,
-    ChatIcon,
-    DotsHorizontalIcon,
-    HeartIcon,
-    ShareIcon,
+    ChatIcon
   } from "@heroicons/react/outline";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
@@ -11,19 +7,15 @@ import { useEffect, useState } from "react";
   import {
     onSnapshot,
     doc,
-    addDoc,
     collection,
   deleteDoc,
-    serverTimestamp,
-    updateDoc,
     setDoc,
   } from "@firebase/firestore";
-  import { db, storage } from "../firebase";
+  import { db} from "../firebase";
 import HeartAnimation from "./HeartAnimation";
 import { BsUpload } from "react-icons/bs";
 import { FiBarChart2 } from "react-icons/fi";
 import Popup from "./Popup";
-import Input from "./Input";
 
   
   const Comment = ({ comment, postId, commentD, id}) =>{
@@ -128,25 +120,6 @@ console.log('postId:',postId,'commentId:',id)
               <FiBarChart2 className="h-7 w-6 group-hover:text-[#1d9bf0]" />
             </div>
           )}
-           
-            {/* <div className="flex items-center space-x-1 group">
-              <div 
-               onClick={(e) => {
-                e.stopPropagation();
-                likePost();
-              }}
-              className="icon group-hover:bg-pink-600/10">
-                <HeartIcon className="h-5 group-hover:text-pink-600" />
-              </div>
-              <span className="group-hover:text-pink-600 text-sm"></span>
-            </div> */}
-  
-            {/* <div className="icon group">
-              <ShareIcon className="h-5 group-hover:text-[#1d9bf0]" />
-            </div>
-            <div className="icon group">
-              <ChartBarIcon className="h-5 group-hover:text-[#1d9bf0]" />
-            </div> */}
           </div>
         </div>
       </div>

@@ -1,8 +1,5 @@
 import {
-    CalendarIcon,
-    ChartBarIcon,
     EmojiHappyIcon,
-    LocationMarkerIcon,
     PhotographIcon,
     XIcon,
   } from "@heroicons/react/outline";
