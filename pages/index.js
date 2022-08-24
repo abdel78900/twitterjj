@@ -47,10 +47,10 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      trendingResults: JSON.parse(JSON.stringify(trendingResults)),
-      followResults: JSON.parse(JSON.stringify(followResults)),
-      session: JSON.parse(JSON.stringify(session)),
-      providers: JSON.parse(JSON.stringify(providers)),
+      trendingResults,
+      followResults,
+      providers,
+      session,
     },
   };
 }
