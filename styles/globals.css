@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-black
+    }
+}
+
+@layer components {
+    .hoverAnimation {
+        @apply hover:bg-[#d9d9d9] hover:bg-opacity-10 rounded-full cursor-pointer w-[52px] h-[52px] xl:w-auto xl:h-auto xl:py-3 xl:px-4 transition duration-200 ease-out;
+    }
+    .icon {
+        @apply cursor-pointer w-9 h-9 hover:bg-[#1d9bf0] hover:bg-opacity-10 flex items-center justify-center rounded-full transition ease-out
+    }
+}
+/* .heart {
+  
+    width: 90px;
+    height: 90px;
+    background: url("../public/heart.png") no-repeat;
+    background-position: -5px -5px;
+    cursor: pointer;
+    transition: background-position 1s steps(28);
+    transition-duration: 0s;
+}
+    .is-active {
+      transition-duration: 1s;
+      background-position: -2805px -5px;
+    } */
+  
