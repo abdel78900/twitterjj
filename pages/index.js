@@ -12,8 +12,7 @@ const Home = ({trendingResults, followResults, providers}) => {
 
   const { data: session } = useSession();
 
-  // if(!session) 
-  return <Login providers = {providers}/>
+  if(!session) return <Login providers = {providers}/>
   return (
     <div className="">
       <Head>
@@ -48,10 +47,10 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      trendingResults,
-      followResults,
-      providers,
-      session,
+      trendingResults: JSON.parse(JSON.stringify(trendingResults)),
+      followResults: JSON.parse(JSON.stringify(followResults)),
+      session: JSON.parse(JSON.stringify(session)),
+      providers: JSON.parse(JSON.stringify(providers)),
     },
   };
 }
