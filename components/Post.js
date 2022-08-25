@@ -190,11 +190,11 @@ const Post = ({ id, post, postPage }) => {
           </div>
 
           <div className="icon group">
-            <BsUpload className="h-5 w-6 group-hover:text-[#1d9bf0] -translate-x-2" />
+            <BsUpload className="h-5 w-6 group-hover:text-[#1d9bf0] -translate-x-6" />
           </div>
           {session.user.uid === post?.id && (
             <div className="icon group">
-              <FiBarChart2 className="h-7 w-6 group-hover:text-[#1d9bf0] -translate-x-2" />
+              <FiBarChart2 className="h-7 w-6 group-hover:text-[#1d9bf0] -translate-x-6" />
             </div>
           )}
         </div>
