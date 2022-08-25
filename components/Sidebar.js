@@ -26,7 +26,7 @@ const Sidebar= () => {
 console.log(isOpenTweet);
   const router = useRouter();
   return (
-    <div className="ml-10 sm:flex flex-col items-center xl:items-start xl:w-[340px] p-2 fixed h-full">
+    <div className="hidden ml-10 sm:flex flex-col items-center xl:items-start xl:w-[340px] p-2 fixed h-full">
       <div
       onClick={()=>{
         router.push("/")}}
