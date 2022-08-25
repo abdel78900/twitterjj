@@ -266,7 +266,7 @@ const ModalTweet =() => {
                           onClick={sendPost}
                           disabled={!input.trim() && selectedFile === null}
                         >
-                          Répondre
+                          Tweeter
                         </button>
       </div>
         )}
