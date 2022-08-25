@@ -156,7 +156,7 @@ const Input = ({inputCom, post}) => {
           )}
         </div>
         {!loading && (
-            <div className='w-[200px] sm:w-full flex items-center justify-between pt-2.5 ml-4 '>
+            <div className=' mr-4 sm:mr-0 flex items-center justify-between pt-2.5 ml-4 '>
             <div className='flex items-center '>
                 <div className='icon'
                 onClick={() => filePickerRef.current.click()}>
