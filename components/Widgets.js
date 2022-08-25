@@ -16,18 +16,9 @@ const Widgets = ({ trendingResults, followResults }) => {
         </div>
       </div>
 
-      <div className="text-[#d9d9d9] space-y-3 bg-[#15181c] pt-2 rounded-xl w-11/12 xl:w-9/12">
-        <h4 className="font-bold text-xl px-4">Tendances pour vous</h4>
-        {trendingResults?.map((result, index) => (
-          <Trending key={index} result={result} />
-        ))}
-        <button className="hover:bg-white hover:bg-opacity-[0.03] px-4 py-3 cursor-pointer transition duration-200 ease-out flex items-center justify-between w-full text-[#1d9bf0] font-light">
-         Voir plus
-        </button>
-      </div>
 
-      <div className="text-[#d9d9d9] space-y-3 bg-[#15181c] pt-2 rounded-xl w-11/12 xl:w-9/12">
-        <h4 className="font-bold text-xl px-4">Suggestions</h4>
+      <div className="text-[#d9d9d9] space-y-3 bg-transparent border border-gray-700 pt-2 rounded-xl w-11/12 xl:w-9/12">
+        <h4 className="font-bold text-xl px-4">Personnes pertinentes</h4>
         {followResults?.map((result, index) => (
           <div
             className="hover:bg-white hover:bg-opacity-[0.03] px-4 py-2 cursor-pointer transition duration-200 ease-out flex items-center"
@@ -51,10 +42,27 @@ const Widgets = ({ trendingResults, followResults }) => {
             </button>
           </div>
         ))}
-        <button className="hover:bg-white hover:bg-opacity-[0.03] px-4 py-3 cursor-pointer transition duration-200 ease-out flex items-center justify-between w-full text-[#1d9bf0] font-light">
+        {/* <button className="hover:bg-white hover:bg-opacity-[0.03] px-4 py-3 cursor-pointer transition duration-200 ease-out flex items-center justify-between w-full text-[#1d9bf0] font-light">
           Voir plus
+        </button> */}
+      </div>
+
+      <div className="text-[#d9d9d9] space-y-3 bg-[#15181c] pt-2 rounded-xl w-11/12 xl:w-9/12">
+        <h4 className="font-bold text-xl px-4">Tendances pour vous</h4>
+        {trendingResults?.map((result, index) => (
+          <Trending key={index} result={result} />
+        ))}
+        <button className="hover:bg-white hover:bg-opacity-[0.03] px-4 py-3 cursor-pointer transition duration-200 ease-out flex items-center justify-between w-full text-[#1d9bf0] text-sm font-light">
+         Voir plus
         </button>
       </div>
+      <p className=" w-2/3 ml-3 text-xs text-gray-700">Conditions d’utilisation
+Politique de Confidentialité
+Politique relative aux cookies
+Accessibilité
+Informations sur les publicités
+Plus</p>
+<p className=" w-2/3 ml-3 text-xs text-gray-700">© 2022 Clone Twitter, Inc.</p>
     </div>
   );
 }
