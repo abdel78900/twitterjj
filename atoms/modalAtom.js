@@ -4,6 +4,10 @@ export const modalState = atom({
     key: "modalState",
     default:false,
 });
+export const modalTweetState = atom({
+    key: "modalTweetState",
+    default:false,
+});
 export const modalDeleteState = atom({
     key: "modalDeleteState",
     default:false,

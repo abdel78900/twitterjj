@@ -9,7 +9,7 @@ import {
   import { useRouter } from "next/router";
   import { useEffect, useState } from "react";
   import { useRecoilState } from "recoil";
-  import { modalDeleteState, modalState } from "../atoms/modalAtom";
+  import { modalDeleteState, modalState, modalTweetState } from "../atoms/modalAtom";
   import Modal from "../components/Modal";
   import Sidebar from "../components/Sidebar";
   import Widgets from "../components/Widgets";
@@ -20,11 +20,14 @@ import {
   import Comment from "../components/Comment";
   import Head from "next/head";
 import ModalDelete from "../components/ModalDelete";
+import ModalTweet from "../components/ModalTweet";
   
 const PostPage = ({ trendingResults, followResults, providers }) => {
     const { data: session } = useSession();
   const [isOpen, setIsOpen] = useRecoilState(modalState);
   const [isOpen1, setIsOpen1] = useRecoilState(modalDeleteState);
+  const [isOpenTweet, setIsOpenTweet] = useRecoilState(modalTweetState);
+
   const [post, setPost] = useState();
   const [comments, setComments] = useState([]);
   const router = useRouter();
@@ -97,6 +100,7 @@ const PostPage = ({ trendingResults, followResults, providers }) => {
         />
 
         {isOpen && <Modal />}
+        {isOpenTweet && <ModalTweet />}
         {isOpen1 && <ModalDelete id={id}/>}
       </main>
     </div>

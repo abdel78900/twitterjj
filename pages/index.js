@@ -7,6 +7,7 @@ import Modal from '../components/Modal'
 import Widgets from '../components/Widgets'
 import { getProviders, getSession, useSession } from "next-auth/react";
 import ModalDelete from '../components/ModalDelete'
+import ModalTweet from '../components/ModalTweet'
 
 const Home = ({trendingResults, followResults, providers}) => {
 
@@ -25,7 +26,8 @@ const Home = ({trendingResults, followResults, providers}) => {
       <Widgets trendingResults={trendingResults}
           followResults={followResults}/>
 
-      <Modal trendingResults={trendingResults} followResults={followResults}/>
+      <Modal/>
+      <ModalTweet/>
       <ModalDelete/>
     </main>
      
