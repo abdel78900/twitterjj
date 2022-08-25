@@ -20,7 +20,7 @@ const Feed = () => {
       ),[db]);
 
     return (
-        <div className='flex-grow border-l border-r border-gray-700 max-w-2xl ml-[150px] xl:ml-[390px] ' >
+        <div className='flex-grow border-l border-r border-gray-700 max-w-2xl sm:ml-[150px] xl:ml-[390px] ' >
             <div className='text-[#D9D9D9] flex items-center sm:justify-between py-2 px-3 sticky top-0 z-50  bg-black/80   backdrop-blur border-gray-700'>
             <h2 className='text-lg sm:text-xl font-bold '>Accueil</h2>
             <div className="hoverAnimation w-9 h-9 flex items-center justify-center xl:px-0 ml-auto">
