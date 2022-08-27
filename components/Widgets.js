@@ -15,7 +15,7 @@ const Widgets = ({ trendingResults, followResults }) => {
           />
         </div>
       </div>
-      <div className="text-[#d9d9d9] space-y-3 bg-transparent border border-gray-700 pt-2 rounded-xl w-11/12 xl:w-9/12">
+       <div className="text-[#d9d9d9] space-y-3 bg-[#15181c] pt-2 rounded-xl w-11/12 xl:w-9/12">
         <h4 className="font-bold text-xl px-4">Tendances pour vous</h4>
         {trendingResults?.map((result, index) => (
           <Trending key={index} result={result} />
@@ -25,7 +25,7 @@ const Widgets = ({ trendingResults, followResults }) => {
         </button>
       </div>
 
-      <div className="text-[#d9d9d9] space-y-3 bg-transparent border border-gray-700 pt-2 rounded-xl w-11/12 xl:w-9/12">
+      <div className="text-[#d9d9d9] space-y-3 bg-[#15181c] pt-2 rounded-xl w-11/12 xl:w-9/12">
         <h4 className="font-bold text-xl px-4">Personnes pertinentes</h4>
         {followResults?.map((result, index) => (
           <div
