@@ -168,7 +168,7 @@ const Post = ({ id, post, postPage }) => {
           <div
             className="flex items-center space-x-1 group"
             onClick={(e) => {
-              // e.stopPropagation();
+              e.stopPropagation();
               likePost();
             }}
           >
