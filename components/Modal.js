@@ -115,7 +115,7 @@ const Modal =() => {
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog as="div" className="fixed z-50 inset-0 pt-8" onClose={setIsOpen}>
-        <div className="flex items-start justify-center min-h-[800px] m-auto sm:min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div className="flex items-start justify-center min-h-[800px] m-auto sm:min-h-screen sm:m-auto pt-4 px-4 pb-20 text-center sm:block sm:p-0">
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
